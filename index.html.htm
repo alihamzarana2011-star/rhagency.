@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rana Hamza | RH Agency</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --neon:#38bdf8;
+  --dark:#020617;
+  --glass:rgba(255,255,255,0.08);
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
+body{background:radial-gradient(circle at top,#020617,#000);color:#e5e7eb;overflow-x:hidden}
+header{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative}
+header::before{content:'';position:absolute;inset:0;background:linear-gradient(120deg,#0ea5e9,#020617);opacity:.15}
+header h1{font-size:3.5rem;letter-spacing:3px;color:#fff;text-shadow:0 0 25px var(--neon);animation:float 3s ease-in-out infinite}
+header p{font-size:1.4rem;margin:15px 0;opacity:.85}
+header a{margin-top:20px;padding:14px 35px;color:#000;background:var(--neon);border-radius:30px;font-weight:700;text-decoration:none;box-shadow:0 0 30px var(--neon);transition:.4s}
+header a:hover{transform:scale(1.1);box-shadow:0 0 60px var(--neon)}
+section{padding:90px 20px;max-width:1100px;margin:auto}
+h2{text-align:center;font-size:2.6rem;margin-bottom:60px;color:#fff}
+h2 span{color:var(--neon)}
+.glass{background:var(--glass);backdrop-filter:blur(18px);border-radius:18px;border:1px solid rgba(255,255,255,.1)}
+#about p{max-width:800px;margin:auto;text-align:center;line-height:1.9;font-size:1.1rem}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}
+.skill{padding:30px;text-align:center;transition:.4s}
+.skill:hover{transform:translateY(-15px) scale(1.05);box-shadow:0 0 40px rgba(56,189,248,.3)}
+.bar{height:10px;background:#020617;border-radius:10px;overflow:hidden;margin-top:15px}
+.fill{height:100%;width:0;background:linear-gradient(90deg,var(--neon),#22d3ee);box-shadow:0 0 20px var(--neon);transition:1.5s}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+.project{padding:25px;transition:.4s;text-align:center}
+.project:hover{transform:scale(1.08);box-shadow:0 0 45px rgba(56,189,248,.4)}
+.project img{width:100%;border-radius:14px;margin-bottom:15px}
+.project a{display:inline-block;margin-top:10px;padding:12px 25px;background:var(--neon);color:#000;text-decoration:none;border-radius:20px;font-weight:700;transition:.4s}
+.project a:hover{transform:scale(1.05);box-shadow:0 0 40px var(--neon)}
+#contact a{display:inline-block;margin:10px;padding:14px 28px;border-radius:30px;background:transparent;border:2px solid var(--neon);color:#fff;text-decoration:none;transition:.4s}
+#contact a:hover{background:var(--neon);color:#000;box-shadow:0 0 30px var(--neon)}
+.reveal{opacity:0;transform:translateY(60px);transition:1s}
+.reveal.active{opacity:1;transform:none}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>RANA HAMZA</h1>
+  <p>Founder of RH Agency • Web Developer</p>
+  <a href="#contact">Hire Me</a>
+</header>
+
+<section id="about" class="reveal">
+<h2><span>About</span> Me</h2>
+<p>
+I am Rana Hamza, a passionate web developer & designer.
+I create modern, animated and high-converting websites for brands and businesses.
+</p>
+</section>
+
+<section class="reveal">
+<h2><span>My</span> Skills</h2>
+<div class="skills">
+  <div class="skill glass">HTML<div class="bar"><div class="fill" data="90%"></div></div></div>
+  <div class="skill glass">CSS<div class="bar"><div class="fill" data="85%"></div></div></div>
+  <div class="skill glass">JavaScript<div class="bar"><div class="fill" data="70%"></div></div></div>
+  <div class="skill glass">Python<div class="bar"><div class="fill" data="60%"></div></div></div>
+</div>
+</section>
+
+<section class="reveal">
+<h2><span>My</span> Projects</h2>
+<div class="projects">
+  <!-- Existing Project -->
+  <div class="project glass">
+    <img src="game-placeholder.png" alt="3D Game">
+    <h3>3D Game</h3>
+    <p>High graphics interactive web game.</p>
+    <a href="#" onclick="alert('Soon will be updated!'); return false;">Play Now →</a>
+  </div>
+
+  <!-- Face Detection Software -->
+  <div class="project glass">
+    <img src="ChatGPT Image Jan 13, 2026, 06_25_55 PM.png" alt="Face Detection Software">
+    <h3>Face Detection Software</h3>
+    <p>Download my custom face detection software with camera & alarm.</p>
+    <a href="projects/Projects.zip" download>Download →</a>
+  </div>
+</div>
+</section>
+
+<section id="contact" class="reveal" style="text-align:center">
+<h2><span>Contact</span> Me</h2>
+<a href="https://wa.me/03058534444">WhatsApp</a>
+<a href="https://www.tiktok.com/@rhagency_9660">TikTok</a>
+<a href="https://www.instagram.com/rhagency.9660">Instagram</a>
+<a href="mailto:rhagency9660@gmail.com">Email</a>
+</section>
+
+<script>
+// Page load popup
+window.addEventListener('load', function(){
+  alert("Hello, welcome to RH Agency!\n- We create modern websites\n- Custom software solutions\n- Join our community");
+});
+
+// reveal
+const reveals=document.querySelectorAll('.reveal');
+window.addEventListener('scroll',()=>{
+  reveals.forEach(r=>{
+    if(r.getBoundingClientRect().top < window.innerHeight-80){
+      r.classList.add('active');
+    }
+  })
+});
+
+// skills animation
+const fills=document.querySelectorAll('.fill');
+fills.forEach(f=>{
+  setTimeout(()=>f.style.width=f.getAttribute('data'),800);
+});
+</script>
+
+</body>
+</html>
+
